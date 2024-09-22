@@ -1,0 +1,129 @@
+.services-container{ 
+display: grid;
+grid-template-columns: repeat(3,1fr);
+padding: 0 5rem;
+min-height: 100vh;
+margin: 10rem 0;
+
+}
+
+#service-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    /* margin: rem 0 0; */
+    padding:  0 15%;
+    white-space: wrap;
+    line-break: loose;  
+    flex-wrap: wrap;
+
+}
+
+#services-container #services-box,
+.services-container .services-box {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), white);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    vertical-align: text-top;
+    border: none;
+    box-shadow: 0 0 1rem var(--color);
+    transition: .5s ease;
+}
+#services-container #services-box p:nth-of-type(2),
+.services-container .services-box p:nth-of-type(2){
+    margin: -.5rem 0 1rem;
+} 
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#services-box p, 
+#services-box ol li, 
+#services-box ul li,
+
+.services-box p, 
+.services-box ol li, 
+.services-box ul li 
+{
+    text-align: left;
+    font-size: 1.4rem;
+    list-style-type: square;
+    list-style-position: inside;
+    line-height: 1.2;
+}
+
+.services-box #code-icon {
+    width: 4rem;
+    margin: 2rem auto;
+}
+
+#services-box h1,
+.services-box h1{
+    font-size: 2rem;
+    margin: rem 0 ;
+}
+
+.services-box h2,
+.services-box h2{
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+/*--------------- @media query ---------------  */
+@media (max-width:1024px) {
+
+    .services-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:768px) {
+
+.services-container {
+    grid-template-columns: repeat(1,1fr);
+    padding:  3rem;
+    min-height: 100vh;
+ }
+
+ #service-container{
+    min-height: 100vh;
+    margin: 10rem 0 0;    
+    flex-direction: column;
+    padding:  0 ;
+
+}
+
+#services-box p, 
+#services-box ol li, 
+#services-box ul li,
+
+.services-box p, 
+.services-box ol li, 
+.services-box ul li{
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+
+#services-box h1,
+.services-box h1{
+    font-size: 2rem;
+    line-height: 1;
+}
+
+#services-box h2,
+.services-box h2{
+font-size: 1.6rem;
+margin: 2rem 0 1rem;
+}
+
+}

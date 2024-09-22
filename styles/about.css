@@ -1,0 +1,122 @@
+/*-------About Page Styles -------*/
+#about {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    gap: 6rem;
+    margin-top: 5rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-img img {
+    border-radius: 20%;
+    width: 25vw;
+    box-shadow: 0 0 .35rem var(--color);
+}
+
+#about-content h2 {
+    font-size: 3rem;
+}
+#about-content h3:nth-of-type(1){
+    margin: 1rem 0 0;
+    font-size: 2rem;
+}
+#about-content h3 {
+    font-size: 1.6rem;
+    margin: .5rem 0 2rem;
+}
+
+#about-content p {
+    font-size: 1.4rem;
+}
+
+#extraContent h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#extraContent ul li {
+    list-style-type: square;
+    font-size: 1.4rem;
+    line-height: 2;
+    text-align: left;
+}
+
+
+#extraContent p a {
+    color: black;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+#extraContent p a:hover {
+    color:#fff;
+}
+
+.cta-buttons{
+    margin: 2rem 0;
+}
+
+#toggleButton {
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#toggleButton:hover {
+    color:#fff;
+}
+
+#toggleButton:active {
+    color: red;}
+
+@media (max-width:768px) {
+
+    /*-------About Page Styles -------*/
+    #about {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #about-img img {
+        border-radius: 20%;
+        width: 50vw;
+    }
+
+    #about-content h2 {
+        font-size: 2.5rem;
+    }
+
+    #about-content h3 {
+        font-size: 1.4rem;
+    }
+
+    #about-content p {
+        font-size: 1.2rem;
+    }
+
+    #extraContent h2 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    #extraContent ul li {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    .cta-buttons{
+        margin: 2rem 0;
+    }
+    #toggleButton {
+        font-size: .9rem;
+
+    }}

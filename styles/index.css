@@ -1,0 +1,484 @@
+/* -------Home Section Styles -------  */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    margin: 8rem 0;
+}
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.home-content h2 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.home-content h3 {margin-bottom: .5rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.home-content span {
+    text-shadow: 0 0 .8rem var(--color);
+    font-family: monospace;
+    padding: 2rem;
+}
+.home-content p {
+    font-size: 1.6rem;
+}
+.home-content p:nth-of-type(2) {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: bold
+}
+.home-img img {
+    border-radius: 10rem;
+    width: 30vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }}
+    homebtn{
+        padding: 3rem;
+        padding: 2rem;
+    }
+ 
+/*-------About Section Styles -------*/
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+.about-img img{
+    border-radius: 20%;
+    width: 25vw;
+    transition: .5s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+.about-img img:hover {
+    box-shadow: 0 0 .45rem var(--color);
+    transform: scale(1.05);
+}
+.about-content h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem;
+}
+.about-content h2 {
+    font-size: 2rem;
+    margin: -2rem 0 2rem;
+    text-align: center;
+}
+.about-content p {
+    margin: 1rem 0 1rem;
+    color: var(--color);
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: .5rem;
+}
+/* -------Services Section Styles ------- */
+.box-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem;
+}
+.even-columns4-items .btn img {
+    margin-bottom: -.7rem;
+}
+.even-columns4-items p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.even-columns5 {
+    perspective-origin: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-content: center;
+}
+.flipbox {
+    display: grid;
+    height: 100%;
+    min-height: 300px;
+    text-align: center;
+    justify-content: center;
+    padding: .8rem;
+    border-radius: 0.5rem;
+    perspective: 1000px;
+}
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 3px;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: transform .5s ease-in-out;
+    transform-style: preserve-3d;
+}
+.service-head-bg {
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+}
+.service-head-bg h2 {
+    color:black;
+}
+.flipbox-front {
+    transform: rotateY(0deg);
+    background-size: cover;
+    min-height: 300px;
+    padding: .8rem;
+    border-radius: 0.5rem;
+    transition: .8s ease-in-out;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), var(--snd-bg-color));
+    align-content: space-evenly;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.flipbox-front img {
+    width: 8rem;
+    margin-inline: auto;
+}
+.flipbox-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    min-height: 300px;
+    border-radius: 0.5rem;
+    transition: .8s ease-in-out;
+    background-color:rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.flipbox-back img {
+    margin-inline: auto;
+    padding-bottom: .6rem;
+}
+.flipbox-back p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.flipbox:hover .flipbox-front {
+    transform: rotateY(-180deg);
+}
+.flipbox:hover .flipbox-back {
+    transform: rotateY(0deg);
+}
+/*-------Project Section Styles -------*/
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+.projects h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+    gap: 2.5rem;
+    cursor: pointer;
+}
+.projects-container .projects-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--color);
+    overflow: hidden;
+    display: flex;
+}
+.projects-box img {
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+.projects-box:hover img {
+    transform: scale(1.1);
+}
+.projects-box .projects-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--snd--color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--snd-bg-color);
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.projects-box:hover .projects-layer {
+    transform: translateY(0);
+}
+.projects-layer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 .50rem var(--color);
+}
+.projects-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.projects-layer a img {
+    width: 2rem;
+}
+.btn-more {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.btn-more .btn {
+    margin: -1rem 0rem;
+}
+/*-------Contact Section Styles -------*/
+.contact {
+    display: flex;
+    flex-direction: column !important;
+    margin-bottom: 4rem;
+}
+.contact h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.contact h2{
+    font-size: 1.7rem;
+    margin: 0rem 0 2rem;
+    font-family: sans-serif;
+}
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form p {
+    margin: -6rem 0 3rem;
+    font-size: 1.6rem;
+}
+form p a {
+    color: hsl(0, 26%, 96%);
+    transition: .5s ease;
+}
+form p a:hover {
+    color: rgb(245, 35, 35);
+}
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--color);
+    box-shadow: 0 0 .5rem var(--color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input {
+    width: 49%;
+}
+input:active {
+    color: red;
+}
+textarea {
+    height: 10rem;
+}
+#Message {
+    height: 20rem;
+}
+.contact form textarea {
+    resize: none;
+}
+#contact-Form .hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.success-message,
+.error-message {
+    background: var(--snd-bg-color);
+    margin: 0 auto;
+    padding: 2px;
+    width: 30vw;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+.success-message {
+    color: green;
+}
+.error-message {
+    color: red;
+}
+.contact form .btn {
+    margin: .5rem 0;
+}
+#formMessage{
+
+    margin-top: -4rem;
+
+}
+
+@media (max-width:1024px) {
+    .even-columns5 {
+        grid-template-columns: repeat(2, 1fr);
+    }}
+
+@media (max-width:768px) {
+    /*-----------Home-Section-Query-----------*/
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+    .home-content h2 {
+        font-size: 4rem;
+        line-height: 1;
+    }
+    .home-content h3 {
+        font-size: 2rem;
+    }
+    .home-content h3:nth-of-type(2) {
+        margin: .5rem 0 ;
+    }
+    .home-content span{
+        margin-left: -1rem;
+    }
+    .home-content {
+        order: 2;
+    }
+    .home-content p {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    .home-img img {
+        width: 60%;
+    }
+    /*-----------About-Section-Query-----------*/
+    .about {
+        flex-direction: column;
+    }
+    .about p {
+        font-size: 1.2rem;
+    }
+    .about .about-img img {
+        width: 60%;
+        margin: 0rem 0 -5rem;
+        transition: .7s ease-in-out;
+    }
+    .about-img img:hover {
+        transform: scale(1.2);
+        margin-bottom: .5rem;
+    }
+    /*-----------Services-Section-Query-----------*/
+    .even-columns5 {
+        grid-template-columns: repeat(2, 70%);
+        gap: 3rem;
+        padding: 10rem;
+    }
+    .service-head-bg {
+        font-size: 1.4rem;
+    }
+    .flipbox {
+        padding: 0 5rem;
+    }
+    .flipbox-back p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    /*-----------Projects-Section-Query-----------*/
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        justify-items: center;
+    }
+    .projects h2 {
+        margin-bottom: 1rem;
+    }
+    /*-------Contact Section Styles -------*/
+    .contact h1 {
+        margin-top: -5rem;
+    }
+    .contact form {
+        max-width: 100%;
+    }
+    form p {
+        margin: -6rem 0 3rem;
+        font-size: 1.2rem;
+    }
+    .contact form .input-box input,
+    .contact form textarea {
+        padding: 1rem;
+        font-size: 1.2rem;
+        margin: .5rem 0;
+    }
+    #Message {
+        height: 10%;
+    }
+
+    .success-message,
+    .error-message {
+        margin: 0 20%;
+        font-size: 1.4rem;
+    }
+
+    .contact form .btn {
+        margin: .5rem;
+    }}
+
+@media (max-width:686px) {
+
+    .home-content h2 {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+   
+
+    .even-columns5 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
+        padding: 0rem;
+    }
+
+    /*-----------Projects-Section-Query-----------*/
+    .projects-container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }}

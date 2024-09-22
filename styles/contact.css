@@ -1,0 +1,167 @@
+#contact {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 0 ;
+}
+
+#contact #heading {
+    text-align: center;
+    font-size: 3rem;
+    margin: 5rem 0 1rem;
+}
+
+#Connect {
+    margin-bottom: -7rem;
+}
+
+#Connect,
+#contact-Form {
+    width: 100%;
+    align-self: start;
+}
+
+#input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#Connect h2 {
+    margin-bottom: -1rem;
+}
+
+#Connect p {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+#Connect p:nth-of-type(4) {
+    margin-bottom: -.8rem;
+}
+
+#Connect a {
+    color: rgb(248, 243, 243);
+    transition: .5s ease;
+}
+
+#Connect a:hover {
+    color: rgb(245, 35, 35);
+}
+
+#input-box input,
+textarea {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--color);
+    box-shadow: 0 0 .5rem var(--color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+#contact-Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+#contact-Form input {
+    width: 49%;
+}
+
+textarea {
+    height: 10rem;
+    width: 100%;
+
+}
+
+#contactForm textarea {
+    resize: none;
+}
+
+#Message {
+    height: 20rem;
+}
+
+#contactForm .hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+
+.success-message,
+.error-message{
+    background: var(--snd-bg-color);
+    margin: 0 auto;
+    padding: 2px ;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: .5rem;}
+
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}
+
+#contactForm .btn {
+    margin:2rem 0;
+}
+
+@media (max-width:768px) {
+
+    #contact {
+        flex-direction: column;
+        margin: 5rem 0 ;
+    }
+
+    #contact #heading {
+        font-size: 1.5rem;
+        margin: 2.5rem 0 .5rem;
+    }
+
+    #Connect {
+        margin-bottom: -3.5rem;
+    }
+
+    #Connect p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    #contactForm #input-box input,
+    #contactForm textarea {
+        padding: 1rem;
+        font-size: 1.2rem;
+        margin: .5rem 0;
+    }
+    #Message {
+        height: 10%;
+    }
+
+    .success-message,
+    .error-message {
+        margin: 0 20%;
+        font-size: 1.4rem;
+    }
+
+    .contact form .btn {
+        margin: .5rem;
+    }
+}
+@media (max-width:378px) {
+
+#contact {
+    flex-direction: column;
+    margin: 5rem 0 0;
+}
+}

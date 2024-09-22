@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    text-rendering: optimizeSpeed;
+
+}
+
+:root {
+    --bg-color: rgb(107, 112, 124);
+    --snd-bg-color: #f5f5f5;
+    --color: #250a1d;
+    --snd--color: #6467f7b4;
+    --bg-color3: rgb(142, 151, 175);
+}
+
+html {
+    /* 63% font-size equivalent to  9.6px; */
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), var(--snd--color));
+
+    /* background: linear-gradient(rgba(0, 0, 0, 0.25), var(--snd--color)); */
+}
+
+section {
+    padding: 3rem 10% 2rem;
+    outline: none;
+}
+
+section p {
+    line-height: 1.4;
+}
+
+/*-------header Styles -------*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 4%;
+    background: var(--snd-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    box-shadow: 0 0 1rem var(--color);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--color);
+    font-weight: 700;
+    cursor: default;
+    transition: 1s ease-in-out;
+}
+
+.logo:hover {
+    color: var(--snd--color);
+
+}
+
+.header button {
+    background: none;
+}
+
+#open-menu-icon,
+#close-menu-icon {
+    width: 1.5rem;
+    display: none;
+
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: #250a1d;
+    margin-left: 1rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    transition: 1s ease-in-out;
+}
+
+.navbar a:hover {
+    background: radial-gradient(rgba(0, 0, 0, 0.1), var(--snd--color));
+    color: var(--color);
+}
+
+/*-------Social Media Icon Styles -------*/
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    width: 5rem;
+    background: transparent;
+    border: .2rem solid var(--color);
+    border-radius: 5rem;
+    font-size: 2rem;
+    color: var(--color);
+    margin: 1rem 1.5rem 2rem 0;
+    transition: .5s ease-in-out;
+}
+.social-media a img{
+width: 100px;
+height: 15px;
+}
+
+.social-media a:hover:nth-of-type(1) {
+    transform: scale(1.2);
+    background-color: hsla(0, 0%, 0%, 0.526);
+}
+
+
+.social-media a:hover:nth-of-type(2) {
+    transform: scale(1.2);
+    background-color: hsla(0, 0%, 0%, 0.526);
+}
+/* FOR FACEBOOKL */
+/* .social-media a:hover:nth-of-type(2) {
+    transform: scale(1.2);
+    background-color:hsl(239, 63%, 58%);
+} */
+.social-media a:hover:nth-of-type(3) {
+    transform: scale(1.2);
+    background: repeating-linear-gradient(rgba(0, 0, 0, 0.25), hsla(275, 100%, 45%, 0.9) , hsla(49, 100%, 45%, 0.9) , hsla(327, 100%, 45%, 0.9) , hsla(348, 100%, 45%, 0.9) );
+}
+
+.social-media a:hover:nth-of-type(4) {
+    transform: scale(1.2);
+    background-color: hsla(120, 88%, 45%, 0.9);
+}
+
+/*-------Span Styles -------*/
+span {
+    color: white;
+}
+
+/*------- Pages Styles-------*/
+/* .about, */
+#contact,
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+#heading {
+    font-size: 2.5rem;
+}
+
+/* -------Reveal Page Styles -------  */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*-------Nav/link Button Styles -------*/
+.btn,
+#btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    background-color: var(--snd-bg-color);
+    color: var(--snd--color);
+    box-shadow: 0 0 1rem var(--color);
+    font-size: 1.2rem;
+    color: #2a2db6;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    margin: 0rem 1.5rem 2rem 0;
+    transition: .8s ease-in-out;
+}
+
+#btn:hover,
+.btn:hover {
+    cursor: pointer;
+    color: rgb(238, 238, 238);
+    background-color: var(--snd--color);
+    font-size: 1.4rem;
+}
+
+.btn img,
+#btn img {
+    width: 1rem;
+}
+
+/*-------Back Button Styles -------*/
+
+.back-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    align-self: self-start;
+    color: black;
+    background-color: var(--snd-bg-color);
+    border-radius: 1rem;
+    margin: 3rem 10%;
+    cursor: pointer;
+    transition: .8s ease-in-out;
+
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+    background-color: var(--bg-color);
+    color: white;
+}
+
+.back-button img {
+    width: .8rem;
+    margin-right: .2rem;
+}
+
+/*-------Hidden Elements Styles -------*/
+
+.hidden {
+    display: none;
+}
+
+/*-------Page Down Styles | For Updates -------*/
+
+.Page-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 2rem;
+}
+
+#Page-down {
+    text-align: center;
+    color: white;
+    width: auto;
+    padding: 5rem;
+    background: var(--bg-color3);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--color);
+}
+
+#Page-down h2,
+p {
+    margin-top: 1rem;
+}
+
+/*-------BackToTop Icon Styles -------*/
+#backtop {
+    line-height: 1;
+    background: var(--snd-bg-color);
+    position: fixed;
+    bottom: 5rem;
+    right: 4rem;
+    border-radius: 30%;
+    box-shadow: 0 0 1rem var(--color);
+    transition: 3ms ease;
+    display: none;
+}
+
+#backtop:active {
+    transform: scale(1.2);
+    background: var(--snd--color);
+}
+
+/*-------Footer Styles -------*/
+.footer,
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snd-bg-color);
+    padding: 0rem 1rem;
+
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    margin: -.4rem 0 1rem;
+}
+
+/* -------------- @Media Queries -------------- */
+
+@media(max-width: 1200px) {
+    body {
+        height: 100%;
+    }
+
+    #open-menu-icon,
+    #close-menu-icon {
+        display: none;
+    }
+}
+
+@media(max-width:991px) {
+    .hearder {
+        margin-right: 25rem;
+    }
+
+    #open-menu-icon,
+    #close-menu-icon {
+        display: none;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .home {
+        display: flex;
+        gap: 5rem;
+
+    }
+
+    .home-img img {
+        width: 100%;
+    }
+
+    #contact {
+        height: 100%;
+    }
+
+    .service {
+        padding: 7rem;
+    }
+
+    .projects {
+        padding-bottom: 4rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer,
+    #footer {
+        padding: 0;
+    }
+}
+
+/*------ media query @768px -------*/
+@media(max-width:768px) {
+    html {
+        text-align: center;
+    }
+
+    #open-menu-icon {
+        margin-right: 3rem;
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+        background: rgba(142, 151, 175, 0.836);
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        line-height: 2;
+        color: var(--snd-bg-color);
+    }
+    .navbar a:hover {
+        /* background: radial-gradient(rgba(0, 0, 0, 0.1), var(--snd--color)); */
+        border-radius: 9rem;
+        padding: .5rem;
+        /* color: var(--snd-bg-color); */
+    }
+
+    #close-menu-icon {
+        display: none;
+        margin-right: 3rem;
+
+    }
+
+    .social-media a{
+        margin: .8rem .5rem 2rem;
+        width: 3rem; 
+    }
+    /*-------GoTo Button Styles -------*/
+    .btn,
+    #btn {
+        padding: .5rem 1.4rem;
+        font-size: 1rem;
+    }
+    .btn img,
+    #btn img {
+        width: .8rem;
+    }
+
+
+    /*-------BackToTop Icon Styles -------*/
+    #backtop {
+        right: 1rem;
+    }
+
+
+
+    .fade_rule {
+        width: 60%;
+        margin: 0 20%;}
+    /*-------Footer Styles -------*/
+
+    .footer,
+    #footer {
+
+        padding: 0;
+    }
+
+    .footer-text {
+        font-size: 1.1rem;
+    }}
