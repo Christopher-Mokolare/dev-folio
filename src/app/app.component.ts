@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 interface Project {
   title: string;
@@ -30,7 +31,7 @@ interface Service {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -39,6 +40,8 @@ export class AppComponent {
   menuOpen = false;
   darkMode = true;
   submitted = false;
+  submitting = false;
+  submitError = false;
   currentYear = new Date().getFullYear();
 
   readonly contactForm = this.fb.group({
@@ -157,7 +160,7 @@ export class AppComponent {
     { label: 'Contact', id: 'contact' }
   ];
 
-  constructor(private readonly fb: FormBuilder) {}
+  constructor(private readonly fb: FormBuilder, private readonly http: HttpClient) {}
 
   scrollTo(id: string): void {
     this.menuOpen = false;
