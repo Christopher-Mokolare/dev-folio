@@ -1,0 +1,227 @@
+<div class="site-shell" [class.light-mode]="!darkMode">
+  <header class="topbar">
+    <a class="brand" href="#home" (click)="scrollTo('home'); $event.preventDefault()">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>Chris<span>.dev</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      @for (item of navItems; track item.id) {
+        <a [href]="'#' + item.id" (click)="scrollTo(item.id); $event.preventDefault()">{{ item.label }}</a>
+      }
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" (click)="toggleTheme()" [attr.aria-label]="darkMode ? 'Switch to light theme' : 'Switch to dark theme'">
+        {{ darkMode ? '☼' : '☾' }}
+      </button>
+      <a class="nav-cta" href="#contact" (click)="scrollTo('contact'); $event.preventDefault()">Let's talk <span>↗</span></a>
+      <button class="menu-btn" type="button" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+        {{ menuOpen ? '×' : '☰' }}
+      </button>
+    </div>
+  </header>
+
+  @if (menuOpen) {
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      @for (item of navItems; track item.id) {
+        <a [href]="'#' + item.id" (click)="scrollTo(item.id); $event.preventDefault()">{{ item.label }}</a>
+      }
+    </nav>
+  }
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> Available for new opportunities</div>
+        <p class="kicker">FULL-STACK DEVELOPER</p>
+        <h1>Building <span>reliable</span><br>software for real users.</h1>
+        <p class="hero-text">
+          I'm Christopher Obakeng Mokolare — a production-focused developer specialising in
+          <strong>.NET, Angular &amp; TypeScript</strong>, with PostgreSQL, AWS and Docker across the stack.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn" type="button" (click)="scrollTo('projects')">View my work <span>→</span></button>
+          <button class="secondary-btn" type="button" (click)="scrollTo('contact')">Start a conversation</button>
+        </div>
+        <div class="social-row" aria-label="Social links">
+          <a href="https://github.com/Christopher-Mokolare" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/christopher-obakeng-mokolare-802447285/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="mailto:2co.mokolare@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="code-card">
+          <div class="code-top"><span></span><span></span><span></span><b>developer.ts</b></div>
+          <pre><code><span class="muted">const</span> developer = &#123;
+  name: <span class="string">'Christopher Mokolare'</span>,
+  role: <span class="string">'Full-Stack Developer'</span>,
+  frontend: [<span class="string">'Angular'</span>, <span class="string">'TypeScript'</span>],
+  backend: [<span class="string">'C#'</span>, <span class="string">'.NET'</span>],
+  data: <span class="string">'PostgreSQL'</span>,
+  cloud: [<span class="string">'AWS'</span>, <span class="string">'Docker'</span>],
+  mindset: <span class="string">'Build. Test. Improve.'</span>
+&#125;;</code></pre>
+        </div>
+        <div class="floating-tag tag-angular">Angular</div>
+        <div class="floating-tag tag-dotnet">.NET</div>
+        <div class="floating-tag tag-cloud">AWS</div>
+      </div>
+    </section>
+
+    <div class="tech-strip">
+      <span>ANGULAR</span><i>•</i><span>ASP.NET CORE</span><i>•</i><span>TYPESCRIPT</span><i>•</i><span>POSTGRESQL</span><i>•</i><span>AWS</span><i>•</i><span>DOCKER</span>
+    </div>
+
+    <section id="about" class="section split-section">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="section-content about-grid">
+        <div>
+          <p class="kicker">WHO I AM</p>
+          <h2>I care about the parts of software users actually depend on.</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            I'm a full-stack developer based in Gauteng, South Africa, focused on building production-oriented
+            web systems rather than isolated demos. My work spans frontend architecture, APIs, databases,
+            authentication, background processing and deployment.
+          </p>
+          <p>
+            I enjoy taking a workflow from an idea through to a working product: designing the data model,
+            implementing the API, building the Angular interface, handling edge cases and getting the system
+            ready for real users.
+          </p>
+          <div class="fact-grid">
+            <div><strong>3+</strong><span>Years building</span></div>
+            <div><strong>.NET</strong><span>Core backend</span></div>
+            <div><strong>Angular</strong><span>Frontend focus</span></div>
+            <div><strong>AWS</strong><span>Cloud delivery</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section dark-panel">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">02 / SKILLS</div>
+          <p class="kicker">THE TOOLBOX</p>
+          <h2>Technologies I use to ship.</h2>
+        </div>
+        <p>Focused on dependable engineering fundamentals, clean architecture and maintainable systems.</p>
+      </div>
+      <div class="skills-grid">
+        @for (group of ['Frontend', 'Backend', 'Cloud & DevOps', 'Data & Security']; track group) {
+          <article class="skill-group">
+            <h3>{{ group }}</h3>
+            @for (skill of skills; track skill.name) {
+              @if (skill.group === group) {
+                <div class="skill-line">
+                  <span>{{ skill.name }}</span>
+                  <small>{{ skill.level }}</small>
+                </div>
+              }
+            }
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading projects-heading">
+        <div>
+          <div class="section-label">03 / SELECTED WORK</div>
+          <p class="kicker">PROJECTS</p>
+          <h2>Systems, not just screenshots.</h2>
+        </div>
+        <p>Selected work across fintech, marketplaces, transport and application platforms.</p>
+      </div>
+
+      <div class="project-grid">
+        @for (project of projects; track project.title) {
+          <article class="project-card" [class.featured]="project.featured">
+            <div class="project-visual">
+              <span class="project-code">{{ project.accent }}</span>
+              <div class="visual-lines"></div>
+              <span class="project-status">{{ project.status }}</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>{{ project.category }}</span><span>↗</span></div>
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+              <div class="chips">
+                @for (tech of project.stack; track tech) { <span>{{ tech }}</span> }
+              </div>
+              <div class="project-links">
+                <a [href]="project.github" target="_blank" rel="noopener">GitHub ↗</a>
+                @if (project.live) {
+                  <a [href]="project.live" target="_blank" rel="noopener">Live project ↗</a>
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="section-label">04 / SERVICES</div>
+      <div class="services-intro">
+        <div>
+          <p class="kicker">HOW I HELP</p>
+          <h2>From interface to infrastructure.</h2>
+        </div>
+        <p>I bring frontend, backend and delivery concerns together so the finished product works as a system.</p>
+      </div>
+      <div class="services-grid">
+        @for (service of services; track service.title) {
+          <article class="service-card">
+            <div class="service-icon">{{ service.icon }}</div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <ul>
+              @for (bullet of service.bullets; track bullet) { <li>{{ bullet }}</li> }
+            </ul>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <div class="contact-copy">
+          <div class="section-label">05 / CONTACT</div>
+          <p class="kicker">LET'S BUILD</p>
+          <h2>Have a product, platform or problem to solve?</h2>
+          <p>
+            Tell me what you're building, where you are in the process and what you need help with.
+            I'll get back to you by email.
+          </p>
+          <div class="contact-details">
+            <a href="mailto:2co.mokolare@gmail.com"><span>Email</span> 2co.mokolare@gmail.com ↗</a>
+            <a href="https://www.linkedin.com/in/christopher-obakeng-mokolare-802447285/" target="_blank" rel="noopener"><span>LinkedIn</span> Christopher Mokolare ↗</a>
+            <a href="https://github.com/Christopher-Mokolare" target="_blank" rel="noopener"><span>GitHub</span> Christopher-Mokolare ↗</a>
+          </div>
+        </div>
+
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+          <label>Name<input type="text" formControlName="name" placeholder="Your name"></label>
+          <label>Email<input type="email" formControlName="email" placeholder="you@company.com"></label>
+          <label>Subject<input type="text" formControlName="subject" placeholder="Project enquiry"></label>
+          <label>Message<textarea rows="6" formControlName="message" placeholder="Tell me about the project..."></textarea></label>
+          <button class="primary-btn" type="submit">Send enquiry <span>→</span></button>
+          @if (submitted) { <p class="form-note">Your email client should have opened with the enquiry prepared.</p> }
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">&lt;/&gt;</span> Chris.dev</div>
+    <p>© {{ currentYear }} Christopher Obakeng Mokolare. Built with Angular &amp; TypeScript.</p>
+    <button type="button" (click)="scrollTo('home')">Back to top ↑</button>
+  </footer>
+</div>
