@@ -212,8 +212,11 @@
           <label>Email<input type="email" formControlName="email" placeholder="you@company.com"></label>
           <label>Subject<input type="text" formControlName="subject" placeholder="Project enquiry"></label>
           <label>Message<textarea rows="6" formControlName="message" placeholder="Tell me about the project..."></textarea></label>
-          <button class="primary-btn" type="submit">Send enquiry <span>→</span></button>
-          @if (submitted) { <p class="form-note">Your email client should have opened with the enquiry prepared.</p> }
+          <button class="primary-btn" type="submit" [disabled]="submitting">
+            {{ submitting ? 'Sending…' : 'Send enquiry' }} <span>→</span>
+          </button>
+          @if (submitted) { <p class="form-note">Thanks — your enquiry has been sent. I'll get back to you by email.</p> }
+          @if (submitError) { <p class="form-note">Something went wrong. Please email me directly at 2co.mokolare@gmail.com.</p> }
         </form>
       </div>
     </section>
