@@ -169,6 +169,9 @@
                 @if (project.live) {
                   <a [href]="project.live" target="_blank" rel="noopener">Live project ↗</a>
                 }
+                @if (project.staging) {
+                  <a [href]="project.staging" target="_blank" rel="noopener">Staging ↗</a>
+                }
               </div>
             </div>
           </article>
