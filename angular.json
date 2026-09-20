@@ -19,7 +19,12 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "assets"
+              "assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/projects",
+                "output": "assets/projects"
+              }
             ],
             "styles": [
               "src/styles.scss"
