@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect x="0" y="0" width="240" height="240" rx="48" fill="#07111f"/>
+  <rect x="8" y="8" width="224" height="224" rx="42" fill="none" stroke="#61e6c1" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Monogram: C wraps M, referencing "Christopher Mokolare" -->
+  <g fill="none" stroke="#61e6c1" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 158 74 A 58 58 0 1 0 158 166" />
+  </g>
+
+  <g fill="#eef5ff">
+    <path d="M 95 158 L 95 84 L 112 84 L 132 122 L 152 84 L 169 84 L 169 158 L 153 158 L 153 111 L 136 142 L 128 142 L 111 111 L 111 158 Z" />
+  </g>
+
+  <!-- code-tag accent, nods to dev work -->
+  <g stroke="#61e6c1" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M 62 108 L 46 120 L 62 132" />
+    <path d="M 178 108 L 194 120 L 178 132" />
+  </g>
+</svg>
