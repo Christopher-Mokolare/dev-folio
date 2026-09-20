@@ -3,7 +3,10 @@ const cors = require('cors');
 
 const app = express();
 const PORT = Number(process.env.PORT || 10000);
-const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGIN || 'https://christopher-mokolare.github.io,https://mokolare-business-software.onrender.com')\n  .split(',')\n  .map(origin => origin.trim())\n  .filter(Boolean);
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGIN || 'https://christopher-mokolare.github.io,https://mokolare-business-software.onrender.com')
+  .split(',')
+  .map(origin => origin.trim())
+  .filter(Boolean);
 const CALLMEBOT_PHONE = process.env.CALLMEBOT_PHONE;
 const CALLMEBOT_APIKEY = process.env.CALLMEBOT_APIKEY;
 
