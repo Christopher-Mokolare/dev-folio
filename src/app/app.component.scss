@@ -75,18 +75,44 @@ a { color: inherit; text-decoration: none; }
 }
 
 .brand-logo-frame {
-  fill: none;
+  fill: color-mix(in srgb, var(--accent) 8%, transparent);
   stroke: currentColor;
-  stroke-width: 2.2;
+  stroke-width: 2;
   stroke-linejoin: round;
+  transition: fill .25s ease, transform .25s ease;
 }
 
-.brand-logo-letter {
+.brand-logo-c,
+.brand-logo-m {
   fill: none;
-  stroke: currentColor;
-  stroke-width: 2.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: stroke-width .2s ease;
+}
+
+.brand-logo-c {
+  stroke: currentColor;
+  stroke-width: 3.4;
+}
+
+.brand-logo-m {
+  stroke: var(--accent-2);
+  stroke-width: 3.4;
+}
+
+.brand-logo-dot {
+  fill: var(--accent);
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 65%, transparent));
+}
+
+.brand:hover .brand-logo-frame {
+  fill: color-mix(in srgb, var(--accent) 14%, transparent);
+  transform: scale(.96);
+}
+
+.brand:hover .brand-logo-c,
+.brand:hover .brand-logo-m {
+  stroke-width: 3.8;
 }
 
 .brand-name {
