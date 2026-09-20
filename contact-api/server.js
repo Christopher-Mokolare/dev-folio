@@ -9,7 +9,12 @@ const CALLMEBOT_APIKEY = process.env.CALLMEBOT_APIKEY;
 
 app.disable('x-powered-by');
 app.use(cors({
-  origin: ALLOWED_ORIGIN,
+  origin: (origin, callback) => {
+    if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Origin not allowed by CORS'));
+  },
   methods: ['POST', 'GET'],
   allowedHeaders: ['Content-Type']
 }));
@@ -75,7 +80,7 @@ app.post('/api/contact', async (req, res) => {
     '',
     'Message:',
     message
-  ].join('\\n');
+  ].join('\n');
 
   try {
     const url = new URL('https://api.callmebot.com/whatsapp.php');
