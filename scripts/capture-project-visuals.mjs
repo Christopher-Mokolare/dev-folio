@@ -7,6 +7,7 @@ const projects = [
   { name: 'indaohub', url: 'https://indaohub.co.za/' },
   { name: 'tsebokgolo', url: 'https://tsebokgolo.co.za/' },
   { name: 'hazie', url: 'https://hazie-v2.web.app/' },
+  { name: 'taxiconnect', url: 'https://taxiconnect-api.2co-mokolare.workers.dev/' },
   { name: 'dfy-staging', url: 'https://dfy-fe-staging.onrender.com/' }
 ];
 

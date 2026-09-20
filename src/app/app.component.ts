@@ -12,6 +12,7 @@ interface Project {
   accent: string;
   github: string;
   live?: string;
+  api?: string;
   visual?: string;
   staging?: string;
   featured?: boolean;
@@ -124,10 +125,13 @@ export class AppComponent implements OnInit {
       title: 'TaxiConnect',
       category: 'Transport / Dispatch',
       description: 'A lightweight dispatch platform for coordinating passengers, conductors and drivers across taxi routes and capacity constraints.',
-      stack: ['TypeScript', 'Firebase', 'Cloudflare', 'Realtime'],
+      stack: ['TypeScript', 'Cloudflare Workers', 'D1', 'WebSockets'],
       status: 'Active build',
       accent: 'TC',
-      github: 'https://github.com/Christopher-Mokolare',
+      github: 'https://github.com/Christopher-Mokolare/taxiconnect',
+      live: 'https://taxiconnect-api.2co-mokolare.workers.dev/',
+      api: 'https://taxiconnect-api.2co-mokolare.workers.dev/',
+      visual: 'assets/projects/taxiconnect.webp',
       featured: true
     },
     {
