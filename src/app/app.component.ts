@@ -12,6 +12,7 @@ interface Project {
   accent: string;
   github: string;
   live?: string;
+  visual?: string;
   staging?: string;
   featured?: boolean;
 }
@@ -103,6 +104,7 @@ export class AppComponent implements OnInit {
       accent: 'SX',
       github: 'https://github.com/Christopher-Mokolare',
       live: 'https://www.secureexchange.co.za/',
+      visual: 'assets/projects/securex.webp',
       featured: true
     },
     {
@@ -115,6 +117,7 @@ export class AppComponent implements OnInit {
       github: 'https://github.com/Christopher-Mokolare/DFY-FE',
       live: 'https://doforyou.co.za/',
       staging: 'https://dfy-fe-staging.onrender.com/',
+      visual: 'assets/projects/doforyou.webp',
       featured: true
     },
     {
@@ -135,7 +138,8 @@ export class AppComponent implements OnInit {
       status: 'Production platform',
       accent: 'IH',
       github: 'https://github.com/Christopher-Mokolare',
-      live: 'https://www.indaohub.co.za/'
+      live: 'https://www.indaohub.co.za/',
+      visual: 'assets/projects/indaohub.webp'
     },
     {
       title: 'HAZIE',
@@ -145,7 +149,8 @@ export class AppComponent implements OnInit {
       status: 'Portfolio project',
       accent: 'HZ',
       github: 'https://github.com/Christopher-Mokolare',
-      live: 'https://hazie-v2.web.app/'
+      live: 'https://hazie-v2.web.app/',
+      visual: 'assets/projects/hazie.webp'
     },
     {
       title: 'TseboKgolo',
@@ -155,7 +160,8 @@ export class AppComponent implements OnInit {
       status: 'Production platform',
       accent: 'TK',
       github: 'https://github.com/Christopher-Mokolare',
-      live: 'https://tsebokgolo.co.za/'
+      live: 'https://tsebokgolo.co.za/',
+      visual: 'assets/projects/tsebokgolo.webp'
     }
   ];
 
