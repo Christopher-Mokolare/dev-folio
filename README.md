@@ -1,6 +1,6 @@
-# Chris.dev — Angular Portfolio
+# Christopher Mokolare — Angular Portfolio
 
-A complete portfolio for Christopher Obakeng Mokolare, rebuilt from the original static **dev-folio** into a modern standalone **Angular + TypeScript** application.
+A complete portfolio for Christopher Obakeng Mokolare, built as a modern standalone **Angular + TypeScript** application. The repository is intended to represent Christopher Mokolare's personal developer brand. into a modern standalone **Angular + TypeScript** application.
 
 ## Stack
 
