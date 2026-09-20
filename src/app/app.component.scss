@@ -375,11 +375,39 @@ footer button:hover { color: var(--accent); }
   .contact-card { padding: 25px; }
   footer { flex-direction: column; align-items: flex-start; }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (min-width: 701px) {
   .reveal { animation: rise .7s ease both; }
-  .floating-tag { animation: float 4s ease-in-out infinite; }\n  .tag-angular { animation: none; }
+  .floating-tag { animation: float 4s ease-in-out infinite; }
+  .tag-angular { animation: none; }
   .tag-dotnet { animation-delay: .7s; }
   .tag-cloud { animation-delay: 1.3s; }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .hero-visual {
+    contain: layout paint;
+  }
+
+  .orbit-one,
+  .orbit-two {
+    display: none;
+  }
+
+  .floating-tag {
+    animation: none;
+  }
+}
+
+@media (min-width: 701px) {
+  .section:not(.hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 700px;
+  }
 }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
