@@ -1,8 +1,13 @@
 <div class="site-shell" [class.light-mode]="!darkMode">
   <header class="topbar">
-    <a class="brand" href="#home" (click)="scrollTo('home'); $event.preventDefault()">
-      <span class="brand-mark">&lt;/&gt;</span>
-      <span>Chris<span>.dev</span></span>
+    <a class="brand" href="#home" aria-label="Christopher Mokolare — home" (click)="scrollTo('home'); $event.preventDefault()">
+      <span class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 52 52" role="img">
+          <path class="brand-logo-frame" d="M26 2 48 15v22L26 50 4 37V15Z"/>
+          <path class="brand-logo-letter" d="M31.5 17.5a9 9 0 1 0 0 17M35 21a7 7 0 0 0-9-2.8M20 18v17M14 24h12"/>
+        </svg>
+      </span>
+      <span class="brand-name"><strong>Christopher</strong><em>Mokolare</em></span>
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
@@ -223,7 +228,7 @@
   </main>
 
   <footer>
-    <div class="footer-brand"><span class="brand-mark">&lt;/&gt;</span> Chris.dev</div>
+    <div class="footer-brand"><span class="brand-logo brand-logo-small" aria-hidden="true"><svg viewBox="0 0 52 52"><path class="brand-logo-frame" d="M26 2 48 15v22L26 50 4 37V15Z"/><path class="brand-logo-letter" d="M31.5 17.5a9 9 0 1 0 0 17M35 21a7 7 0 0 0-9-2.8M20 18v17M14 24h12"/></svg></span><span class="brand-name"><strong>Christopher</strong><em>Mokolare</em></span></div>
     <p>© {{ currentYear }} Christopher Obakeng Mokolare. Built with Angular &amp; TypeScript.</p>
     <button type="button" (click)="scrollTo('home')">Back to top ↑</button>
   </footer>
