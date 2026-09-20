@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -36,7 +36,9 @@ interface Service {
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  private readonly themeStorageKey = 'cm-portal-theme';
+
   menuOpen = false;
   darkMode = true;
   submitted = false;
@@ -162,6 +164,11 @@ export class AppComponent {
 
   constructor(private readonly fb: FormBuilder, private readonly http: HttpClient) {}
 
+  ngOnInit(): void {
+    const savedTheme = localStorage.getItem(this.themeStorageKey);
+    this.darkMode = savedTheme !== 'light';
+  }
+
   scrollTo(id: string): void {
     this.menuOpen = false;
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -169,6 +176,7 @@ export class AppComponent {
 
   toggleTheme(): void {
     this.darkMode = !this.darkMode;
+    localStorage.setItem(this.themeStorageKey, this.darkMode ? 'dark' : 'light');
   }
 
   @HostListener('window:keydown.escape')
