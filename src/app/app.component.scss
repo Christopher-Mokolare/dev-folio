@@ -237,7 +237,12 @@ pre .string { color: var(--warm); }
   background: var(--surface); border-radius: 10px; font-size: .75rem; font-weight: 800;
   box-shadow: 0 12px 30px rgba(0,0,0,.2);
 }
-.tag-angular { top: 50%; left: 0; right: auto; color: var(--accent); transform: translateY(-50%); }
+.tag-angular {
+  top: 77px;
+  left: 87px;
+  right: auto;
+  color: var(--accent);
+}
 .tag-dotnet { bottom: 14%; left: 0; color: var(--accent-2); }
 .tag-cloud { top: 50%; right: -2%; color: var(--warm); }
 
@@ -353,7 +358,11 @@ footer button:hover { color: var(--accent); }
   pre { padding: 20px; font-size: .67rem; }
   .orbit-one { width: 300px; height: 300px; }
   .orbit-two { width: 370px; height: 370px; }
-  .tag-angular { left: -5px; right: auto; }
+  .tag-angular {
+    top: 77px;
+    left: 87px;
+    right: auto;
+  }
   .tag-dotnet { left: -5px; }
   .tag-cloud { right: -5px; }
   .split-section { display: block; }
