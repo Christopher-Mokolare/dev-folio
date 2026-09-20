@@ -38,6 +38,7 @@ interface Service {
 })
 export class AppComponent implements OnInit {
   private readonly themeStorageKey = 'cm-portal-theme';
+  private readonly contactApiUrl = 'https://cm-portal-contact.onrender.com/api/contact';
 
   menuOpen = false;
   darkMode = false;
