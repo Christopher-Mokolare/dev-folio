@@ -132,10 +132,10 @@ export class AppComponent implements OnInit {
       category: 'Web Platform',
       description: 'A web platform project focused on practical workflows, responsive frontend engineering and maintainable application structure.',
       stack: ['Angular', 'TypeScript', '.NET', 'SQL'],
-      status: 'Portfolio project',
+      status: 'Production platform',
       accent: 'IH',
       github: 'https://github.com/Christopher-Mokolare',
-      live: 'http://indaohub.co.za/'
+      live: 'https://www.indaohub.co.za/'
     },
     {
       title: 'HAZIE',
@@ -152,7 +152,7 @@ export class AppComponent implements OnInit {
       category: 'Web Application',
       description: 'A software project built to explore structured application workflows and polished frontend experiences.',
       stack: ['TypeScript', 'Angular', 'REST', 'SQL'],
-      status: 'Portfolio project',
+      status: 'Production platform',
       accent: 'TK',
       github: 'https://github.com/Christopher-Mokolare',
       live: 'https://tsebokgolo.co.za/'
