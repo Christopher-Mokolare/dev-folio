@@ -282,6 +282,9 @@ h2 {
 .project-card:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
 .project-card.featured { grid-column: span 1; }
 .project-visual { height: 235px; position: relative; display: grid; place-items: center; background: radial-gradient(circle at 50% 35%, rgba(97,230,193,.14), transparent 45%), var(--surface-2); overflow: hidden; }
+.project-visual.has-screenshot { display: block; background: var(--surface-2); }
+.project-visual.has-screenshot::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.5)); pointer-events: none; }
+.project-visual img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top center; }
 .project-code { font: 800 clamp(2.8rem, 6vw, 5.5rem) "Space Grotesk", sans-serif; letter-spacing: -.08em; color: color-mix(in srgb, var(--accent) 75%, var(--text)); opacity: .8; }
 .visual-lines { position: absolute; inset: 18%; border: 1px solid var(--line); transform: rotate(-7deg); box-shadow: 20px 20px 0 rgba(97,230,193,.04); }
 .project-status { position: absolute; bottom: 14px; left: 14px; padding: 6px 9px; border: 1px solid var(--line); background: var(--bg); color: var(--muted); border-radius: 7px; font-size: .64rem; font-weight: 700; }
