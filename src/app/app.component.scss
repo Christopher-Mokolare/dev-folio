@@ -227,7 +227,7 @@ a { color: inherit; text-decoration: none; }
 pre { margin: 0; padding: 28px; overflow: auto; color: #cfe2f7; font: 500 .82rem/1.9 ui-monospace, SFMono-Regular, Menlo, monospace; }
 .light-mode pre { color: #27405d; }
 pre .muted { color: var(--accent-2); }
-pre .string { color: var(--warm); }
+pre .string { color: orange; }
 .orbit { position: absolute; border: 1px solid var(--line); border-radius: 50%; }
 .orbit-one { width: 440px; height: 440px; }
 .orbit-two { width: 600px; height: 600px; opacity: .5; }
