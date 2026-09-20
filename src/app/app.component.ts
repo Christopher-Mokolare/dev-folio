@@ -185,21 +185,35 @@ export class AppComponent implements OnInit {
     this.menuOpen = false;
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
       return;
     }
 
     const value = this.contactForm.getRawValue();
-    const mailto = [
-      'mailto:2co.mokolare@gmail.com',
-      `?subject=${encodeURIComponent(value.subject ?? 'Portfolio enquiry')}`,
-      `&body=${encodeURIComponent(`Name: ${value.name}\nEmail: ${value.email}\n\n${value.message}`)}`
-    ].join('');
+    this.submitting = true;
+    this.submitted = false;
+    this.submitError = false;
 
-    window.location.href = mailto;
-    this.submitted = true;
+    try {
+      const response = await fetch(this.contactApiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(value)
+      });
+
+      if (!response.ok) {
+        throw new Error('Contact request failed');
+      }
+
+      this.submitted = true;
+      this.contactForm.reset();
+    } catch {
+      this.submitError = true;
+    } finally {
+      this.submitting = false;
+    }
   }
 
   trackByName(_: number, item: Skill): string {
