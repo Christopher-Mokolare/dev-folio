@@ -12,6 +12,7 @@ interface Project {
   accent: string;
   github: string;
   live?: string;
+  staging?: string;
   featured?: boolean;
 }
 
