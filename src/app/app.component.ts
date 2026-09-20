@@ -101,7 +101,7 @@ export class AppComponent implements OnInit {
       status: 'Production platform',
       accent: 'SX',
       github: 'https://github.com/Christopher-Mokolare',
-      live: 'https://secureexchange.co.za',
+      live: 'https://www.secureexchange.co.za/',
       featured: true
     },
     {
@@ -109,10 +109,11 @@ export class AppComponent implements OnInit {
       category: 'Task Marketplace',
       description: 'A two-sided task marketplace connecting creators and runners with role-based access, task workflows, payouts and notifications.',
       stack: ['React', '.NET', 'PostgreSQL', 'Render', 'Payments'],
-      status: 'Active build',
+      status: 'Production platform',
       accent: 'DFY',
       github: 'https://github.com/Christopher-Mokolare/DFY-FE',
-      live: 'https://dfy-fe-staging.onrender.com',
+      live: 'https://doforyou.co.za/',
+      staging: 'https://dfy-fe-staging.onrender.com/',
       featured: true
     },
     {
@@ -132,7 +133,8 @@ export class AppComponent implements OnInit {
       stack: ['Angular', 'TypeScript', '.NET', 'SQL'],
       status: 'Portfolio project',
       accent: 'IH',
-      github: 'https://github.com/Christopher-Mokolare'
+      github: 'https://github.com/Christopher-Mokolare',
+      live: 'http://indaohub.co.za/'
     },
     {
       title: 'HAZIE',
@@ -141,7 +143,8 @@ export class AppComponent implements OnInit {
       stack: ['C#', 'ASP.NET Core', 'Angular', 'PostgreSQL'],
       status: 'Portfolio project',
       accent: 'HZ',
-      github: 'https://github.com/Christopher-Mokolare'
+      github: 'https://github.com/Christopher-Mokolare',
+      live: 'https://hazie-v2.web.app/'
     },
     {
       title: 'TseboKgolo',
@@ -150,7 +153,8 @@ export class AppComponent implements OnInit {
       stack: ['TypeScript', 'Angular', 'REST', 'SQL'],
       status: 'Portfolio project',
       accent: 'TK',
-      github: 'https://github.com/Christopher-Mokolare'
+      github: 'https://github.com/Christopher-Mokolare',
+      live: 'https://tsebokgolo.co.za/'
     }
   ];
 
