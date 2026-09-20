@@ -152,9 +152,13 @@
       <div class="project-grid">
         @for (project of projects; track project.title) {
           <article class="project-card" [class.featured]="project.featured">
-            <div class="project-visual">
-              <span class="project-code">{{ project.accent }}</span>
-              <div class="visual-lines"></div>
+            <div class="project-visual" [class.has-screenshot]="project.visual">
+              @if (project.visual) {
+                <img [src]="project.visual" [alt]="project.title + ' landing page preview'" loading="lazy">
+              } @else {
+                <span class="project-code">{{ project.accent }}</span>
+                <div class="visual-lines"></div>
+              }
               <span class="project-status">{{ project.status }}</span>
             </div>
             <div class="project-body">
