@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
   private readonly themeStorageKey = 'cm-portal-theme';
 
   menuOpen = false;
-  darkMode = true;
+  darkMode = false;
   submitted = false;
   submitting = false;
   submitError = false;
@@ -166,7 +166,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const savedTheme = localStorage.getItem(this.themeStorageKey);
-    this.darkMode = savedTheme !== 'light';
+    this.darkMode = savedTheme === 'dark';
   }
 
   scrollTo(id: string): void {
