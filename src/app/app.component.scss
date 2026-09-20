@@ -53,19 +53,62 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
+  color: var(--text);
 }
 
-.brand-wordmark {
+.brand-logo {
   display: block;
-  width: 176px;
-  height: auto;
-  border-radius: 8px;
+  width: 238px;
+  height: 48px;
+  overflow: visible;
 }
 
-.footer-wordmark {
-  width: 156px;
-  border-radius: 7px;
+.logo-bg {
+  fill: #07111f;
+  transition: fill .25s ease;
 }
+
+.logo-border {
+  fill: none;
+  stroke: rgba(97, 230, 193, .28);
+  stroke-width: 1.5;
+  transition: stroke .25s ease;
+}
+
+.logo-accent {
+  fill: none;
+  stroke: #61e6c1;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke .25s ease;
+}
+
+.logo-mark {
+  fill: #eef5ff;
+  transition: fill .25s ease;
+}
+
+.logo-name {
+  fill: #eef5ff;
+  font: 700 22px "Space Grotesk", "Segoe UI", Arial, sans-serif;
+  letter-spacing: -.035em;
+  transition: fill .25s ease;
+}
+
+.logo-role {
+  fill: #8ea3bd;
+  font: 700 7px "DM Sans", "Segoe UI", Arial, sans-serif;
+  letter-spacing: 1.7px;
+  transition: fill .25s ease;
+}
+
+.light-mode .logo-bg { fill: #eef3f8; }
+.light-mode .logo-border { stroke: rgba(8, 124, 104, .25); }
+.light-mode .logo-accent { stroke: #087c68; }
+.light-mode .logo-mark,
+.light-mode .logo-name { fill: #0c1828; }
+.light-mode .logo-role { fill: #5b6b7f; }
 
 .desktop-nav { display: flex; gap: clamp(18px, 2.6vw, 38px); }
 .desktop-nav a, .mobile-nav a {
@@ -298,9 +341,10 @@ footer button:hover { color: var(--accent); }
 @media (max-width: 700px) {
   .topbar { height: 68px; padding-inline: 18px; }
   .nav-cta { display: none; }
-  .brand-name strong { font-size: .8rem; }
-  .brand-name em { font-size: .56rem; }
-  .brand-logo { width: 34px; height: 34px; flex-basis: 34px; }
+  .brand-logo {
+    width: 205px;
+    height: 41px;
+  }
   .section { width: min(100% - 32px, 620px); padding: 78px 0; }
   .hero { min-height: auto; padding-top: 55px; }
   .hero h1 { font-size: clamp(3rem, 16vw, 5rem); }
